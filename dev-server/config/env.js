@@ -27,10 +27,6 @@ function setDevEnv(app) {
     process.env.DB_URL = 'mongodb://localhost:27017/vue2-db';
     process.env.TOKEN_SECRET = '27946982a9a4408996607fe95a6299f9';
     // Amazon s3 secret key (confirm)
-    process.env.AWS_ACCESS_KEY_ID ='AKIAIGN3EU4Y2RJQ7HCA';
-    process.env.AWS_SECRET_ACCESS_KEY ='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';
-    process.env.AWS_REGION =  'us-east-2';
-    process.env.AWS_BUCKET_NAME = 'divo1-items-pics';
     process.env.AWS_SDK_LOAD_CONFIG = 1
 }
 
@@ -45,10 +41,7 @@ function setProdEnv(app) {
     app.use(bodyParser.json());
     app.use(express.static(__dirname + '/../../dist'));
      // Amazon s3 secret key (confirm)
-     process.env.AWS_ACCESS_KEY_ID ='AKIAIGN3EU4Y2RJQ7HCA';
-     process.env.AWS_SECRET_ACCESS_KEY ='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';
-     process.env.AWS_REGION =  'us-east-2';
-     process.env.AWS_BUCKET_NAME = 'divo1-items-pics';
+
      process.env.AWS_SDK_LOAD_CONFIG = 1
 
 }
